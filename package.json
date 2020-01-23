@@ -1,0 +1,10 @@
+{
+  "name": "goto",
+  "version": "0.0.1",
+  "description": "A link shortener/redirect tool for my productivity",
+  "main": "index.js",
+  "repository": "https://github.com/pepopowitz/goto",
+  "author": "Steven Hicks <steven.j.hicks@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
