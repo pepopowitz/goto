@@ -11,7 +11,7 @@ exports.handler = function(event, context, callback) {
   callback(null, {
     statusCode: 302,
     headers: {
-      Location: findMap(query),
+      Location: exports.findMap(query),
       'Cache-Control': 'no-cache',
     },
     body: JSON.stringify({}),
@@ -27,7 +27,7 @@ exports.handler = function(event, context, callback) {
   // callback(null, response);
 };
 
-function findMap(query) {
+exports.findMap = function(query) {
   const customMatch = map[query];
   if (customMatch) {
     console.log('matched! redirecting to ', customMatch);
@@ -35,4 +35,4 @@ function findMap(query) {
   } else {
     return 'https://google.com/search?q=' + encodeURIComponent(query);
   }
-}
+};
