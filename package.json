@@ -6,5 +6,12 @@
   "repository": "https://github.com/pepopowitz/goto",
   "author": "Steven Hicks <steven.j.hicks@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "jest": "^25.1.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  }
 }

@@ -11,7 +11,7 @@ exports.handler = function(event, context, callback) {
   callback(null, {
     statusCode: 302,
     headers: {
-      Location: exports.findMap(query),
+      Location: exports.interpret(query),
       'Cache-Control': 'no-cache',
     },
     body: JSON.stringify({}),
@@ -27,7 +27,7 @@ exports.handler = function(event, context, callback) {
   // callback(null, response);
 };
 
-exports.findMap = function(query) {
+exports.interpret = function(query) {
   const customMatch = map[query];
   if (customMatch) {
     console.log('matched! redirecting to ', customMatch);
