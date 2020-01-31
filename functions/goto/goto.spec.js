@@ -15,11 +15,11 @@ describe('interpret', () => {
 
   describe('hits', () => {
     it.each([
-      ['palette', 'https://github.com/artsy/palette'],
-      ['palette pulls', 'https://github.com/artsy/palette/pulls'],
-      ['mp', 'https://github.com/artsy/metaphysics'],
-      ['mp pulls', 'https://github.com/artsy/metaphysics/pulls'],
-      ['github', 'https://github.com'],
+      ['gh palette', 'https://github.com/artsy/palette'],
+      ['gh palette pulls', 'https://github.com/artsy/palette/pulls'],
+      ['gh mp', 'https://github.com/artsy/metaphysics'],
+      ['gh mp pulls', 'https://github.com/artsy/metaphysics/pulls'],
+      ['gh', 'https://github.com'],
       ['staging', 'https://staging.artsy.net'],
       ['prod', 'https://artsy.net'],
       ['mail', 'mail.google.com'],

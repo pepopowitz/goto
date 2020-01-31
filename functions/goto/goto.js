@@ -30,7 +30,6 @@ exports.handler = function(event, context, callback) {
 exports.interpret = function(query) {
   const customMatch = map[query];
   if (customMatch) {
-    console.log('matched! redirecting to ', customMatch);
     return customMatch;
   } else {
     return 'https://google.com/search?q=' + encodeURIComponent(query);
