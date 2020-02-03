@@ -1,4 +1,4 @@
-const map = require('./map.js');
+const { resolver } = require('./resolver.js');
 
 exports.handler = function(event, context, callback) {
   const query = event.queryStringParameters.query;
@@ -28,7 +28,7 @@ exports.handler = function(event, context, callback) {
 };
 
 exports.interpret = function(query) {
-  const customMatch = map[query];
+  const customMatch = resolver(query);
   if (customMatch) {
     return customMatch;
   } else {
