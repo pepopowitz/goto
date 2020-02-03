@@ -11,7 +11,7 @@
     "jest": "^25.1.0"
   },
   "scripts": {
-    "build": "console.log('hi')",
+    "build": "console.log('this is just here to ensure netlify deploys any functions in folders.')",
     "test": "jest",
     "test:watch": "jest --watch"
   }
