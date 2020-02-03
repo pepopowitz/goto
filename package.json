@@ -11,6 +11,7 @@
     "jest": "^25.1.0"
   },
   "scripts": {
+    "build": "console.log('hi')",
     "test": "jest",
     "test:watch": "jest --watch"
   }
