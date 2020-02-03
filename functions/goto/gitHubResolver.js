@@ -9,7 +9,7 @@ exports.gitHubResolver = function(query) {
     return 'https://github.com';
   }
 
-  if (splits[1].toUpperCase() === 'MEE') {
+  if (splits[1].toUpperCase() === 'ME') {
     return resolveMyRepo(splits);
   } else {
     return resolveArtsyRepo(splits);
