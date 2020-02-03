@@ -3,11 +3,6 @@ const { resolver } = require('./resolver.js');
 exports.handler = function(event, context, callback) {
   const query = event.queryStringParameters.query;
 
-  // callback(null, {
-  //   statusCode: 200,
-  //   body: JSON.stringify(map, null, 2),
-  // });
-
   callback(null, {
     statusCode: 302,
     headers: {
@@ -16,15 +11,6 @@ exports.handler = function(event, context, callback) {
     },
     body: JSON.stringify({}),
   });
-
-  // var response = {
-  //   statusCode: 302,
-  //   headers: {
-  //     Location: search(query),
-  //   },
-  //   body: null,
-  // };
-  // callback(null, response);
 };
 
 exports.interpret = function(query) {
