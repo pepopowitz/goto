@@ -8,7 +8,6 @@ exports.resolver = function(query) {
 
   const map = {
     artsy: 'https://github.com/artsy',
-    gh: 'https://github.com',
     staging: 'https://staging.artsy.net',
     prod: 'https://artsy.net',
     mail: 'https://mail.google.com',
