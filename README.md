@@ -15,4 +15,4 @@ It's kind of like I'm building a CLI in my browser search bar. Chrome recognizes
 
 ## Why didn't you just _____?
 
-There are probably a million other ways to solve this problem, but this is the one that fit best with my habits. It was also a fun opportunity to play with Netlify functions, so ¯\\_(ツ)_/¯
+There are probably a million other ways to solve this problem, but this is the one that fit best with my habits. It was also a fun opportunity to play with Netlify functions, so ¯\\\_(ツ)\_/¯
