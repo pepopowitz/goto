@@ -10,7 +10,7 @@ A minor annoyance is that when I type `reaction` into my browser search bar, it 
 
 ![Me searching for `reaction` without `goto`](docs/search-for-reaction-before.gif)
 
-`goto` is a link shortener (kind of) that I can [set as a custom search engine in Chrome](TODO: link). When I want to visit the reaction repo on GitHub, I now type `goto gh reaction` and hit enter, like this:
+`goto` is a link shortener (kind of) that I can [set as a custom search engine in Chrome](https://support.google.com/chrome/answer/95426?co=GENIE.Platform%3DDesktop&hl=en). When I want to visit the reaction repo on GitHub, I now type `goto gh reaction` and hit enter, like this:
 
 ![Me searching for `reaction` with `goto`](docs/search-for-reaction-after.gif)
 
