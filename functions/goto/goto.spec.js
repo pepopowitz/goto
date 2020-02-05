@@ -24,6 +24,7 @@ describe('interpret', () => {
       ['GH POSITRON', 'https://github.com/artsy/positron'],
       ['gh me', 'https://github.com/pepopowitz'],
       ['gh me stevenhicks.me', 'https://github.com/pepopowitz/stevenhicks.me'],
+      ['gh artsy', 'https://github.com/artsy'],
       ['staging', 'https://staging.artsy.net'],
       ['prod', 'https://artsy.net'],
       ['mail', 'mail.google.com'],

@@ -7,7 +7,6 @@ exports.resolver = function(query) {
   }
 
   const map = {
-    artsy: 'https://github.com/artsy',
     staging: 'https://staging.artsy.net',
     prod: 'https://artsy.net',
     mail: 'https://mail.google.com',

@@ -39,6 +39,10 @@ function resolveMyRepo(splits) {
 
 function resolveArtsyRepo(splits) {
   const translation1 = translate(splits[1]);
+  if (translation1 === 'artsy') {
+    return 'https://github.com/artsy';
+  }
+
   if (splits.length === 2) {
     return `https://github.com/artsy/${translation1}`;
   }
