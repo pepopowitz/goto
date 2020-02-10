@@ -12,9 +12,9 @@ exports.resolver = function(query) {
     mail: 'https://mail.google.com',
     calendar: 'https://calendar.google.com',
     backlog:
-      'https://artsyproduct.atlassian.net/secure/RapidBoard.jspa?rapidView=4&view=planning.nodetail',
+      'https://artsyproduct.atlassian.net/secure/RapidBoard.jspa?rapidView=86&projectKey=CNMT&view=planning&issueLimit=100',
     sprint:
-      'https://artsyproduct.atlassian.net/secure/RapidBoard.jspa?rapidView=4&view=detail',
+      'https://artsyproduct.atlassian.net/secure/RapidBoard.jspa?rapidView=86&projectKey=CNMT',
   };
   return map[query];
 };
