@@ -21,6 +21,7 @@ describe('interpret', () => {
       ['gh meatphysics', 'https://github.com/artsy/metaphysics'],
       ['gh mp pulls', 'https://github.com/artsy/metaphysics/pulls'],
       ['gh', 'https://github.com'],
+      ['gh prs', 'https://github.com/notifications/beta'],
       ['GH POSITRON', 'https://github.com/artsy/positron'],
       ['gh me', 'https://github.com/pepopowitz'],
       ['gh me stevenhicks.me', 'https://github.com/pepopowitz/stevenhicks.me'],

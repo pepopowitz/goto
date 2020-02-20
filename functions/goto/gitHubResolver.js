@@ -9,11 +9,24 @@ exports.gitHubResolver = function(query) {
     return 'https://github.com';
   }
 
+  if (splits.length === 2) {
+    const match = map[splits[1].toLowerCase()];
+    if (match) {
+      return match;
+    }
+  }
+
   if (splits[1].toUpperCase() === 'ME') {
     return resolveMyRepo(splits);
   } else {
     return resolveArtsyRepo(splits);
   }
+};
+
+const map = {
+  prs: 'https://github.com/notifications/beta',
+  me: 'https://github.com/pepopowitz',
+  artsy: 'https://github.com/artsy',
 };
 
 function translate(value) {
@@ -24,8 +37,8 @@ function translate(value) {
 }
 
 function resolveMyRepo(splits) {
-  if (splits.length === 2) {
-    return 'https://github.com/pepopowitz';
+  if (splits.length < 3) {
+    return;
   }
 
   const translation1 = translate(splits[2]);
@@ -39,8 +52,8 @@ function resolveMyRepo(splits) {
 
 function resolveArtsyRepo(splits) {
   const translation1 = translate(splits[1]);
-  if (translation1 === 'artsy') {
-    return 'https://github.com/artsy';
+  if (splits.length < 2) {
+    return;
   }
 
   if (splits.length === 2) {
