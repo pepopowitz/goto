@@ -1,20 +1,50 @@
-const { gitHubResolver } = require('./gitHubResolver.js');
+const { urlMap } = require('./urlMap.js');
+const { translationMap } = require('./translationMap.js');
 
 exports.resolver = function(query) {
-  const gitHubUrl = gitHubResolver(query);
-  if (gitHubUrl) {
-    return gitHubUrl;
+  const splits = query
+    .split(' ')
+    .map(translate)
+    .map(x => x.toLowerCase());
+
+  return findMatch(splits, urlMap);
+};
+
+function findMatch(args, map) {
+  const [first, ...rest] = args;
+
+  const match = map[first];
+  return processMatch(match, rest);
+}
+
+function processMatch(match, remainingArgs) {
+  if (!match) {
+    return;
   }
 
-  const map = {
-    staging: 'https://staging.artsy.net',
-    prod: 'https://artsy.net',
-    mail: 'https://mail.google.com',
-    calendar: 'https://calendar.google.com',
-    backlog:
-      'https://artsyproduct.atlassian.net/secure/RapidBoard.jspa?rapidView=86&projectKey=CNMT&view=planning&issueLimit=100',
-    sprint:
-      'https://artsyproduct.atlassian.net/secure/RapidBoard.jspa?rapidView=86&projectKey=CNMT',
-  };
-  return map[query];
-};
+  if (typeof match === 'string') {
+    return match;
+  }
+
+  if (!remainingArgs || remainingArgs.length === 0) {
+    return match[''];
+  }
+
+  if (match[remainingArgs[0]]) {
+    return findMatch(remainingArgs, match);
+  }
+
+  if (remainingArgs.length === 1 && match['*'] !== undefined) {
+    return match['*'].replace('{0}', remainingArgs[0]);
+  }
+
+  if (remainingArgs.length === 2 && match['**'] !== undefined) {
+    return match['**']
+      .replace('{0}', remainingArgs[0])
+      .replace('{1}', remainingArgs[1]);
+  }
+}
+
+function translate(value) {
+  return translationMap[value.toUpperCase()] || value;
+}

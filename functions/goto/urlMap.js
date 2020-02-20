@@ -1,0 +1,32 @@
+// wildcards: {
+//   '': "matches on 'goto wildcards'",
+//   '*': "matches on 'goto wildcards unmatched'",
+//   '**': "matches on 'goto wildcards unmatched otherArg'",
+// }
+
+exports.urlMap = {
+  staging: 'https://staging.artsy.net',
+  prod: 'https://artsy.net',
+  mail: 'https://mail.google.com',
+  calendar: 'https://calendar.google.com',
+  backlog:
+    'https://artsyproduct.atlassian.net/secure/RapidBoard.jspa?rapidView=86&projectKey=CNMT&view=planning&issueLimit=100',
+  sprint:
+    'https://artsyproduct.atlassian.net/secure/RapidBoard.jspa?rapidView=86&projectKey=CNMT',
+  gh: {
+    '': 'https://github.com',
+    '*': 'https://github.com/artsy/{0}',
+    '**': 'https://github.com/artsy/{0}/{1}',
+    prs: 'https://github.com/notifications/beta',
+    me: {
+      '': 'https://github.com/pepopowitz',
+      '*': `https://github.com/pepopowitz/{0}`,
+      '**': 'https://github.com/pepopowitz/{0}/{1}',
+    },
+    artsy: {
+      '': 'https://github.com/artsy/',
+      '*': 'https://github.com/artsy/{0}',
+      '**': 'https://github.com/artsy/{0}/{1}',
+    },
+  },
+};
