@@ -9,6 +9,8 @@ exports.urlMap = {
   prod: 'https://artsy.net',
   mail: 'https://mail.google.com',
   calendar: 'https://calendar.google.com',
+  oncall:
+    'https://artsy.app.opsgenie.com/settings/schedule/detail/aa7d47fa-ab67-4c09-b9ca-d43a20efbb04',
   backlog:
     'https://artsyproduct.atlassian.net/secure/RapidBoard.jspa?rapidView=86&projectKey=CNMT&view=planning&issueLimit=100',
   sprint:
