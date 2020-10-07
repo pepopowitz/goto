@@ -12,9 +12,9 @@ exports.urlMap = {
   oncall:
     'https://artsy.app.opsgenie.com/settings/schedule/detail/aa7d47fa-ab67-4c09-b9ca-d43a20efbb04',
   backlog:
-    'https://artsyproduct.atlassian.net/secure/RapidBoard.jspa?rapidView=86&projectKey=CNMT&view=planning&issueLimit=100',
+    'https://artsyproduct.atlassian.net/secure/RapidBoard.jspa?rapidView=77&projectKey=CX&view=planning&issueLimit=100',
   sprint:
-    'https://artsyproduct.atlassian.net/secure/RapidBoard.jspa?rapidView=86&projectKey=CNMT',
+    'https://artsyproduct.atlassian.net/secure/RapidBoard.jspa?rapidView=77&projectKey=CX',
   gh: {
     '': 'https://github.com',
     '*': 'https://github.com/artsy/{0}',
