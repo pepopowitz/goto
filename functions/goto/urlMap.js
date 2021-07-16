@@ -20,6 +20,7 @@ exports.urlMap = {
     '*': 'https://github.com/artsy/{0}',
     '**': 'https://github.com/artsy/{0}/{1}',
     prs: 'https://github.com/notifications/beta',
+    pulls: 'https://github.com/notifications/beta',
     me: {
       '': 'https://github.com/pepopowitz',
       '*': `https://github.com/pepopowitz/{0}`,
