@@ -7,15 +7,15 @@
 exports.urlMap = {
   staging: {
     '': 'https://staging.artsy.net',
-    'cms': 'https://cms-staging.artsy.net/',
-    'old admin': 'https://admin-staging.artsy.net/',
-    'partners': 'https://admin-partners-staging.artsy.net/'
+    cms: 'https://cms-staging.artsy.net/',
+    oldadmin: 'https://admin-staging.artsy.net/',
+    partners: 'https://admin-partners-staging.artsy.net/'
   },
   prod: {
     '': 'https://artsy.net',
-    'cms': 'https://cms.artsy.net/',
-    'old admin': 'https://admin.artsy.net',
-    'partners': 'https://admin-partners.artsy.net/'
+    cms: 'https://cms.artsy.net/',
+    oldadmin: 'https://admin.artsy.net',
+    partners: 'https://admin-partners.artsy.net/'
   },
   mail: 'https://mail.google.com',
   calendar: 'https://calendar.google.com',
